@@ -10,24 +10,36 @@ const Task = new importTask();
 
 //function should return a totalValue and totalTime variable wrapped in an object
 function totals(list){
-
     let totalValue = 0;
     let totalTime = 0;
 
-    for(){
-
+    for(let n = 0; n < list.lenth; n++){
+      totalValue = list[n].value + totalValue;
+      totalTime = list[n].time + totalTime;
     }
 
     return {
-
-    }
+      totalValue:totalValue,
+      totalTime:totalTime
+    };
 }
 
 //works the the same as above, but stops short at the kth number in the list
 function partialTotals(list,k){
+  let totalValue = 0;
+  let totalTime = 0;
 
+  if(k < list.length){
+    for(let n = 0; k < n; n++){
+      totalValue = list[n].value + totalValue;
+      totalTime = list[n].time + totalTime;
+  }
 
-
+  return {
+    totalValue:totalValue,
+    totalTime:totalTime
+    };
+  }
 }
 
 //returns a sorted version of the task list from least to greatest according to its time variable
