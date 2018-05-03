@@ -13,9 +13,9 @@ function totals(list){
     let totalValue = 0;
     let totalTime = 0;
 
-    for(let n = 0; n < list.lenth; n++){
-      totalValue = list[n].value + totalValue;
-      totalTime = list[n].time + totalTime;
+    for(let a = 0; a < list.length; a++){
+      totalValue = list[a].value + totalValue;
+      totalTime = list[a].time + totalTime;
     }
 
     return {
@@ -30,9 +30,9 @@ function partialTotals(list,k){
   let totalTime = 0;
 
   if(k < list.length){
-    for(let n = 0; k < n; n++){
-      totalValue = list[n].value + totalValue;
-      totalTime = list[n].time + totalTime;
+    for(let a = 0; a < k; a++){
+      totalValue = list[a].value + totalValue;
+      totalTime = list[a].time + totalTime;
   }
 
   return {

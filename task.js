@@ -12,14 +12,14 @@ const TaskExport = function(){
 
     //returns a random integer between 0 and n inclusive
     function rInt(n){
-      return Math.round(Math.random())
+      return Math.round(n*Math.random())
     }
     //returns a list of task objects.
     //You must reference the function above to create them each time
     //make all times range from 0 to 15 and all values range from 0 to 100
     function Factory(n){
-      let list=[];
-      for (let a = 0; a < 10; a++) {
+      let list= [];
+      for (let a = 0; a < n; a++) {
         let potato = createTask(rInt(15),rInt(100));
         list[a] = potato;
       }
